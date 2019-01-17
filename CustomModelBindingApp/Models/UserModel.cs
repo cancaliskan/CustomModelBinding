@@ -8,9 +8,9 @@ namespace CustomModelBindingApp.Models
         public string Name { get; set; }
         public string Address { get; set; }
 
-   /*     public UserModel()
+        public UserModel()
         {
-
+            
         }
 
         public UserModel(string name, string address)
@@ -18,6 +18,6 @@ namespace CustomModelBindingApp.Models
             UserIid = Guid.NewGuid().ToString();
             Name = name;
             Address = address;
-        }*/
+        }
     }
 }

@@ -30,10 +30,11 @@ namespace CustomModelBindingApp.Models
             var splitData = values.Split(new char[] { '|' });
             if (splitData.Length >= 2)
             {
-                var result = new UserModel()
+                var result = new UserModel
                 {
-                    Name = splitData[0],
-                    Address = splitData[1],
+                    UserIid = splitData[0],
+                    Name = splitData[1],
+                    Address = splitData[2]
                 };
                 bindingContext.Result = ModelBindingResult.Success(result);
             }
