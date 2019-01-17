@@ -25,20 +25,29 @@ namespace CustomModelBindingApp.Models
                 return Task.CompletedTask;
             }
 
-            string values = Convert.ToString(((JValue)JObject.Parse(valueFromBody)["value"]).Value);
+            //string values = Convert.ToString(((JValue)JObject.Parse(valueFromBody)["model"]).Value);
 
-            var splitData = values.Split(new char[] { '|' });
+            var splitModel = valueFromBody.Split(new char[] { '^' });
 
-            if (splitData.Length >= 2)
+            if (splitModel.Length >= 2)
             {
-                var result = new UserModel
+                foreach (var model in splitModel)
                 {
-                    UserIid = splitData[0],
-                    Name = splitData[1],
-                    Address = splitData[2]
-                };
-                bindingContext.Result = ModelBindingResult.Success(result);
+                    var splitData = model.ToString().Split(new char[] { '|' });
+                    if (splitData.Length >= 2)
+                    {
+                        var result = new UserModel
+                        {
+                            UserIid = splitData[0],
+                            Name = splitData[1],
+                            Address = splitData[2]
+                        };
+                        bindingContext.Result = ModelBindingResult.Success(result);
+                    }
+                }
             }
+
+           
 
             return Task.CompletedTask;
         }
