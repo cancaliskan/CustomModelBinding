@@ -48,3 +48,28 @@ C:\Users\Ekol Ajans\Documents\GitHub\CustomModelBinding\CustomModelBinding\Custo
 C:\Users\Ekol Ajans\Documents\GitHub\CustomModelBinding\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.dll
 C:\Users\Ekol Ajans\Documents\GitHub\CustomModelBinding\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.pdb
 C:\Users\Ekol Ajans\Documents\GitHub\CustomModelBinding\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.csproj.CopyComplete
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.deps.json
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.runtimeconfig.json
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.runtimeconfig.dev.json
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.dll
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.pdb
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.Views.dll
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\bin\Debug\netcoreapp2.2\CustomModelBindingApp.Views.pdb
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.csprojAssemblyReference.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.csproj.CoreCompileInputs.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.RazorAssemblyInfo.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.RazorAssemblyInfo.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.AssemblyInfoInputs.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.AssemblyInfo.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.TagHelpers.input.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.TagHelpers.output.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.RazorCoreGenerate.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.RazorTargetAssemblyInfo.cache
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.RazorTargetAssemblyInfo.cs
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.Views.pdb
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.dll
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.pdb
+C:\Users\Can\Documents\GitHub\CustomModelBinding\CustomModelBindingApp\obj\Debug\netcoreapp2.2\CustomModelBindingApp.csproj.CopyComplete

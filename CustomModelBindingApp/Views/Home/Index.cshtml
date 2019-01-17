@@ -1,13 +1,4 @@
-﻿@model IEnumerable<UserModel>
-
-<form action="/Home/Index" method="post">
-    <div>
-        <input type="hidden" name="userUids" id="userUids" value=@Model />
-        <button id="btnSubmit" type="submit">Submit</button>
-    </div>
-
-</form>
-
+﻿@model List<UserModel>
 <table>
     <thead>
         <tr>
@@ -21,13 +12,60 @@
         {
             <tr>
                 <th>
-                    <input type="checkbox" name="chkSelectAll" id="chkSelect" value=@person.UserIid />
+                    <input type="checkbox" name="UserUid" id=@person.UserIid value=@string.Concat(@person.UserIid,"|",@person.Name,"|",@person.Address) />
                 </th>
-                <th>@person.Name</th>
-                <th>@person.Address</th>
+                <th><label for=@person.Name>@person.Name </label></th>
+                <th><label for=@person.Address>@person.Address </label></th>
             </tr>
         }
     </tbody>
 </table>
 
 
+<div>
+    <button onclick="Next()" id="submit" type="button">Next</button>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+//    function Next() {
+//        var http = new XMLHttpRequest();
+//        var url = '/Home/Index';
+//        var params = GetModelData();//'orem=ipsum&name=binny';
+//        http.open('POST', url, true);
+
+////Send the proper header information along with the request
+//        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+//        http.onreadystatechange = function() {//Call a function when the state changes.
+//            if(http.readyState == 4 && http.status == 200) {
+//                alert(http.responseText);
+//            }
+//        }
+//        http.send(params);
+//    }
+
+
+    function GetModelData() {
+        var list = "";
+        $("input:checkbox[name=UserUid]:checked").each(function () {
+            list += ($(this).val());
+            //list.push($(this).val());
+        });
+        return list;
+    }
+
+    function Next() {
+        var model = GetModelData();
+        var url = "/Home/Index";
+        $.ajax({
+            url: url,
+            data: model.toString(),
+            type: "POST",
+            success: function (data, textStatus, XMLHttpRequest) {
+                alert(data);
+            }
+        });
+    }
+</script>

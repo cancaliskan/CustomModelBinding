@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CustomModelBindingApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,11 +19,11 @@ namespace CustomModelBindingApp.Controllers
                    new UserModel("Yakup","Torbalı")
             };
 
-            return View(users);
+            return View(users.ToList());
         }
 
         [HttpPost]
-        public IActionResult Index([ModelBinder(BinderType = typeof(CustomModelBinder))]IEnumerable<UserModel> model)
+        public IActionResult Index([ModelBinder(BinderType = typeof(CustomModelBinder))]string model)
         {
             //return View();
             return Json(model);

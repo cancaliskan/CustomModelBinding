@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Newtonsoft.Json.Linq;
+using System;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Newtonsoft.Json.Linq;
 
 namespace CustomModelBindingApp.Models
 {
@@ -28,6 +28,7 @@ namespace CustomModelBindingApp.Models
             string values = Convert.ToString(((JValue)JObject.Parse(valueFromBody)["value"]).Value);
 
             var splitData = values.Split(new char[] { '|' });
+
             if (splitData.Length >= 2)
             {
                 var result = new UserModel

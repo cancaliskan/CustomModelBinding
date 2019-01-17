@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿using System;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CustomModelBindingApp.Models
 {
@@ -6,7 +7,7 @@ namespace CustomModelBindingApp.Models
     {
         public IModelBinder GetBinder(ModelBinderProviderContext context)
         {
-            if (context.Metadata.ModelType == typeof(UserModel))
+            if (context.Metadata.ModelType == typeof(string))
                 return new CustomModelBinder();
 
             return null;
