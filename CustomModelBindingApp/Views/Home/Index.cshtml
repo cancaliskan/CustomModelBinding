@@ -5,6 +5,7 @@
         <input type="hidden" name="userUids" id="userUids" value=@Model />
         <button id="btnSubmit" type="submit">Submit</button>
     </div>
+
 </form>
 
 <table>
@@ -20,7 +21,7 @@
         {
             <tr>
                 <th>
-                    <input type="checkbox" name="chkSelectAll" id="chkSelectAll" value="" />
+                    <input type="checkbox" name="chkSelectAll" id="chkSelect" value=@person.UserIid />
                 </th>
                 <th>@person.Name</th>
                 <th>@person.Address</th>
@@ -28,6 +29,5 @@
         }
     </tbody>
 </table>
-
 
 

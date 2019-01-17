@@ -21,7 +21,7 @@ namespace CustomModelBindingApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index([ModelBinder(BinderType = typeof(CustomModelBinder))]UserModel model)
+        public IActionResult Index([ModelBinder(BinderType = typeof(CustomModelBinder))]IEnumerable<UserModel> model)
         {
             //return View();
             return Json(model);
