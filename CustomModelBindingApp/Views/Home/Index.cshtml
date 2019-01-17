@@ -1,0 +1,33 @@
+﻿@*@model IEnumerable<UserModel>
+
+<form action="/Home/Index" method="post">
+    <div>
+        <input type="hidden" name="userUids" id="userUids" value=@Model />
+        <button id="btnSubmit" type="submit">Submit</button>
+    </div>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>User Name</th>
+            <th>User Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <th>
+                    <input type="checkbox" name="chkSelectAll" id="chkSelectAll" value="" />
+                </th>
+                <th>@person.Name</th>
+                <th>@person.Address</th>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+
+
