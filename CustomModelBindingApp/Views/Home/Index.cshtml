@@ -1,102 +1,50 @@
 ﻿@model List<UserModel>
-<form action="/" method="post">
-    <table>
-        <thead>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>User Name</th>
+            <th>User Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
             <tr>
-                <th></th>
-                <th>User Name</th>
-                <th>User Address</th>
+                <th>
+                    <input type="checkbox" name="UserUid" id=@person.UserIid 
+                           value=@string.Concat(@person.UserIid,"|",@person.Name,"|",@person.Address,"^") />
+                </th>
+                <th><label for=@person.Name>@person.Name </label></th>
+                <th><label for=@person.Address>@person.Address </label></th>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var person in Model)
-            {
-                <tr>
-                    <th>
-                        <input type="checkbox" name="UserUid" id=@person.UserIid value=@string.Concat(@person.UserIid,"|",@person.Name,"|",@person.Address,"^") />
-                    </th>
-                    <th><label for=@person.Name>@person.Name </label></th>
-                    <th><label for=@person.Address>@person.Address </label></th>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
 
 
-    <div>
-        <button onclick="Next()" id="submit" type="button">Next</button>
-    </div>
-</form>
+<div>
+    <button onclick="Next()" id="submit" type="button">Next</button>
+</div>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script type="text/javascript">
-    //    function Next() {
-    //        var http = new XMLHttpRequest();
-    //        var url = '/Home/Index';
-    //        var params = GetModelData();//'orem=ipsum&name=binny';
-    //        http.open('POST', url, true);
-
-    ////Send the proper header information along with the request
-    //        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-    //        http.onreadystatechange = function() {//Call a function when the state changes.
-    //            if(http.readyState == 4 && http.status == 200) {
-    //                alert(http.responseText);
-    //            }
-    //        }
-    //        http.send(params);
-    //    }
-
+    function Next() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/Home/Index', true);
+        xhr.onload = function () {
+            alert(jQuery.parseJSON(xhr.responseText));
+        };
+        xhr.send(GetModelData());
+    }
 
     function GetModelData() {
         var list = "";
         $("input:checkbox[name=UserUid]:checked").each(function () {
             list += ($(this).val());
-            //list.push($(this).val());
         });
         return list;
     }
-    function Next() {
-        //form encoded data
-        var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
-        var data = $('form').serialize();
-
-        //JSON data
-        var dataType = 'application/json; charset=utf-8';
-
-        console.log('Submitting form...');
-        $.ajax({
-            type: 'POST',
-            url: '/Home/Index',
-            dataType: 'json',
-            contentType: dataType,
-            data: GetModelData(),
-            success: function (result) {
-                alert(result);
-                console.log('Data received: ');
-                console.log(result);
-            }
-        });
-    }
-    //function Next() {
-    //    var dataType = 'application/x-www-form-urlencoded; charset=utf-8';
-    //    var data = $('form').serialize();
-
-    //    var dataType = 'application/json; charset=utf-8';
-
-    //    var model = GetModelData();
-    //    var url = "/Home/Index";
-    //    $.ajax({
-    //        type: "POST",
-    //        url: url,
-    //        dataType: 'json',
-    //        contentType: dataType,
-    //        data: model,
-    //        success: function (result, textStatus, XMLHttpRequest) {
-    //            alert(result);
-    //        }
-    //    });
-    //}
-
-
 </script>

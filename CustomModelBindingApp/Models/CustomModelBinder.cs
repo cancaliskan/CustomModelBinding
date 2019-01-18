@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CustomModelBindingApp.Models
 {
@@ -25,11 +26,11 @@ namespace CustomModelBindingApp.Models
                 return Task.CompletedTask;
             }
 
-            //string values = Convert.ToString(((JValue)JObject.Parse(valueFromBody)["model"]).Value);
-
             var splitModel = valueFromBody.Split(new char[] { '^' });
 
-            if (splitModel.Length >= 2)
+            var items = new List<UserModel>();
+
+            if (splitModel.Length >= 1)
             {
                 foreach (var model in splitModel)
                 {
@@ -42,12 +43,12 @@ namespace CustomModelBindingApp.Models
                             Name = splitData[1],
                             Address = splitData[2]
                         };
-                        bindingContext.Result = ModelBindingResult.Success(result);
+                        items.Add(result);
                     }
                 }
             }
 
-           
+            bindingContext.Result = ModelBindingResult.Success(JsonConvert.SerializeObject(items));
 
             return Task.CompletedTask;
         }
